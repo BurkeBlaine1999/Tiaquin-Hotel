@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="stylesheet.css" rel="stylesheet"> 
+<meta charset="utf-8">
+<title>Signed In</title>
+<link href='http://fonts.googleapis.com/css?family=Marko+One' rel='stylesheet' type='text/css'>
+
+</head>
+
+  
+</style>
+	<head>
+	</head>
+	<body>
+	
+	<h1 id=head1 >The Tiaquin Hotel</h1>
+	<table id=head2 >
+	<th><a href="home2.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Suiteinfo2.html">Suites</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="activities2.html">Activities</a>
+	&nbsp;&nbsp;&nbsp;&nbsp; <a href="logout.html">Sign out</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="form2.html">booking</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+	<a href="bistro2.html">Restraunt</a> </th>     
+	</table>
+	<p>
+	<h2>You have booked...</h2>
+	</p>			
+	<h4  id="BookName" ></h4>
+	<h4  id="addressUser" ></h4>
+	<h4  id="EirUser" ></h4>	
+	<h4  id="number" ></h4>
+	<h4  id="email" ></h4>
+	<h4  id="ETarrival" ></h4>	
+	<h4  id="roomType" ></h4>
+	<div id="result"></div>
+	<table>
+	<tr>
+		<th>Cost:</th>
+			<td>
+				<div id="results"></div>
+			</td>
+
+	<tr>
+	</table>
+	<h2>All Payments can be made at the Hotel Reception area!</h2>
+	<a href="submit.html"><button >Submit</button></a>
+	</body>
+	<script>
+	document.getElementById("BookName").innerHTML ="Name : " + localStorage.bookUser;
+	document.getElementById("addressUser").innerHTML ="Address : " + localStorage.userAddress;	
+	document.getElementById("EirUser").innerHTML ="Eir Code : " + localStorage.userEir;
+	document.getElementById("number").innerHTML ="Contact Number : " + localStorage.phone;	
+	document.getElementById("email").innerHTML ="Contact Email : " + localStorage.mail;	
+	document.getElementById("ETarrival").innerHTML ="Date Of Arrival : " + localStorage.arrival;	
+    document.getElementById("result").innerHTML = sessionStorage.getItem("suite");
+    document.getElementById("results").innerHTML = sessionStorage.getItem("cost");
+	</script>	
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="stylesheet.css" rel="stylesheet"> 
+<meta charset="utf-8">
+<title>Sign In</title>
+<link href='http://fonts.googleapis.com/css?family=Marko+One' rel='stylesheet' type='text/css'>
+
+</head>
+	<body>
+
+	
+	<h1 id=head1 >The Tiaquin Hotel</h1>
+	<table id=head2 >
+	<th><a href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Suiteinfo.html">Suites</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="activities.html">Activities</a>
+	&nbsp;&nbsp;&nbsp;&nbsp; <a href="login.html">Sign In</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Sign Up.html">Sign Up</a>    &nbsp;&nbsp;&nbsp;&nbsp; <a href="form.html">booking</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+	<a href="bistro.html">Restraunt</a> </th>  
+	</table>
+
+<script>
+username = new Array("Blaine","Ciaran","Connor");
+password = new Array("Burke","Quinn","Madden");
+signuser = new Array("Blaine");
+signpass = new Array("Burke");
+function Login(form) 
+{ username =  Array("Blaine","Ciaran","Connor"); password =  Array("Burke","Quinn","Madden");
+ page = "logged_In" + ".html"; 
+ 
+ if (form.username.value == username[0] && form.password.value == password[0] || form.username.value == username[1] && form.password.value == password[1] ||
+
+form.username.value == username[2] && form.password.value == password[2] || form.username.value == username[3] && form.password.value == password[3] ||
+
+form.username.value == username[4] && form.password.value == password[4] || form.username.value == username[5] && form.password.value == password[5] ||
+
+form.username.value == username[6] && form.password.value == password[6] || form.username.value == username[7] && form.password.value == password[7] ||
+
+form.username.value == username[8] && form.password.value == password[8] || form.username.value == username[9] && form.password.value == password[9])
+
+{ self.location.href = page; } 
+
+else { alert("Either the username or password you entered is incorrect.\nPlease try again."); form.username.focus(); } return true; }
+
+
+
+
+
+
+</script>
+ </head> <body bgcolor="#eeeeee"> <form> <br> <center> <h5>Username: <input type="text" name="username" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';"
+
+onBlur="this.style.background = '#bfbfbf';" > <br> Password: <input type="password" name="password" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';"
+
+onBlur="this.style.background = '#bfbfbf';"> <br> <input type="button" value="Login" onClick="Login(this.form);" style="background:#bfbfbf;color:#000000;border-color:#212121;" onMouseOver="this.style.color =
+
+'#404040';" onMouseOut="this.style.color = '#000000';" onFocusr="this.style.color = '#404040';" onBlur="this.style.color = '#000000';"></h5> </center> </form> 
+
+
+
+
+</body> 
+
+</html>
+

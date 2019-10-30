@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="stylesheet.css" rel="stylesheet"> 
+<meta charset="utf-8">
+<title>Sign Up</title>
+<link href='http://fonts.googleapis.com/css?family=Marko+One' rel='stylesheet' type='text/css'>
+
+</head>
+	<body>
+
+
+	
+	<h1 id=head1 >The Tiaquin Hotel</h1>
+	<table id=head2 >
+	<th><a href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Suiteinfo.html">Suites</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="activities.html">Activities</a>
+	&nbsp;&nbsp;&nbsp;&nbsp; <a href="login.html">Sign In</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Sign Up.html">Sign Up</a>    &nbsp;&nbsp;&nbsp;&nbsp; <a href="form.html">booking</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+	<a href="bistro.html">Restraunt</a> </th>  
+	</table>
+		
+		<form action="logged_In.html">
+	<p>	FullName: <input id="fullName" name = "username"; type="text" size="15“ maxlength="30" required><br>
+		Password: <input id="box1" type="password" size="15“ maxlength="30" required>		
+		<h4 id="out"></h4>
+		<form>
+		
+	</p>
+	
+	<button onclick="enterName()"  >Submit</button>  
+	</body>
+	
+	<script>
+	document.getElementById("box1").addEventListener("input",myFunction);
+	var message="Valid password";
+	var errormessage = "password must be a minimum of 6 characters";
+
+	function myFunction(){
+	if(document.getElementById("box1").value.length>6){
+	document.getElementById("out").innerHTML=message;
+	
+		}
+	else{
+	document.getElementById("out").innerHTML=errormessage;
+		}
+	}
+
+	function enterName(){
+		localStorage.user = document.getElementById("fullName").value;	
+
+	}	
+
+
+	</script>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="stylesheet.css" rel="stylesheet"> 
+<meta charset="utf-8">
+<title>Booking form</title>
+<link href='http://fonts.googleapis.com/css?family=Marko+One' rel='stylesheet' type='text/css'>
+</head>	
+	<body id="body" class="dark-mode">
+	
+	<h1 id=head1 >The Tiaquin Hotel</h1>
+	
+	<table id=head2 >
+	<th><a href="home2.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Suiteinfo2.html">Suites</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="activities2.html">Activities</a>
+	&nbsp;&nbsp;&nbsp;&nbsp; <a href="logout.html">Sign out</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="form2.html">booking</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+	<a href="bistro2.html">Restraunt</a> </th>     
+	</table>
+	
+	<form action="Booked.html">
+	<table border="2" id="table1" >
+		<tr>
+			<th>Full Name</th>
+			<td><input id="Name" type="text"  size="35 maxlength="30" required></h4></td>			
+		</tr>
+		
+		<tr>
+			<th> Address</th>
+			<td><input id="Address1" type="text"  size="35 maxlength="60" required></td>
+		</tr>
+		
+		<tr>
+			<th>  City </th>
+			<td><input id="City" type="text"  size="35 maxlength="30" required></td>
+		</tr>
+		
+		<tr>
+			<th>  Eir Code </th>
+			<td><input id="EirCode" type="text" size="35 maxlength="30" required> <h4 id="out"></h4></td>	
+			
+		</tr>
+		
+		<tr>
+			<th>Phone Number</th>
+			<td><input id="box2" type="tel" size="35 maxlength="30" required> <h4 id="phoneout"></h4></td>			
+		</tr>
+
+		<tr>
+			<th>  Email </th>
+			<td><input id="email" type="email" size="35 maxlength="30" required></input> </td>
+		</tr>
+
+		<tr>
+			<th>date of arrival</th>
+			<td><input id="ETA" size="35" required></input></td>			
+		</tr>	
+		
+		<tr>
+			<th>  Choice of suite </th>		
+			<td required>		
+			<input type="radio" name="genre" 
+			id="Formal" onclick="Fsuite()" /> Formal
+			
+			<input type="radio" name="genre" 
+			id="Premium" onclick="Psuite()" /> Premium
+			
+			<input type="radio" name="genre" 
+			id="Deluxe" onclick="Dsuite()" /> Deluxe
+			
+			<input type="radio" name="genre" 
+			id="Luxury" onclick="Lsuite()" /> Luxury
+			<div id="result"></div>
+			<div id="results"></div>
+			</td>
+		</tr>	
+	</table>
+			
+		<input type="submit" onclick="booked()" >
+	</form>
+	
+
+		<h3>Discount/Coupon code! </h3>		
+		
+		Enter a valid Code for 20 euro off each night you stay!
+		<br>
+		<input id="coupon" />
+		<p id="answer"></p>
+		<button  onclick="myCoupon()">Check</button>	
+
+	
+</body>
+	
+	<script>
+	function booked(){
+		localStorage.bookUser = document.getElementById("Name").value;
+		localStorage.userAddress = document.getElementById("Address1").value;
+		localStorage.userEir = document.getElementById("EirCode").value; 
+		localStorage.arrival = document.getElementById("ETA").value;	
+		localStorage.mail = document.getElementById("email").value;	
+		localStorage.phone = document.getElementById("box2").value;			
+}
+
+	document.getElementById("EirCode").addEventListener("input",myFunction);
+	var message="Input must be a Valid Zip/Eir Code";
+	var errormessage = "";
+
+	function myFunction(){
+	if(document.getElementById("EirCode").value.length>7){
+	document.getElementById("out").innerHTML=message;
+		}
+	else if(document.getElementById("EirCode").value.length<7){
+	document.getElementById("out").innerHTML=message;
+		}
+		
+	else{
+	document.getElementById("out").innerHTML=errormessage;
+		}
+	}
+	
+	function save(){
+	sessionStorage.myNewItem = document.getElementById("inbox").value;
+	}
+
+
+
+	document.getElementById("box2").addEventListener("input",phone);
+	var Phoneerrormessage="Input must be a Valid Phone Number";
+	var Phonemessage = "";
+
+	function phone(){
+	if(document.getElementById("box2").value.length>10){
+	document.getElementById("phoneout").innerHTML=Phoneerrormessage;
+		}
+	else if(document.getElementById("box2").value.length<10){
+	document.getElementById("phoneout").innerHTML=Phoneerrormessage;
+		}
+		
+	else{
+	document.getElementById("phoneout").innerHTML=Phonemessage;
+		}
+	}
+	
+	var suite;
+	var cost;
+	var total;
+	total = cost;
+	
+	function Fsuite(){
+		alert ("You have selected Formal Suite ");	
+		sessionStorage.setItem("suite", "You have selected Formal Suite ");
+		document.getElementById("result").innerHTML = sessionStorage.getItem("suite");
+
+		sessionStorage.setItem("cost", 40 + " euro");
+		document.getElementById("results").innerHTML = sessionStorage.getItem("cost");		
+		discount =20;			
+	}
+
+	function Psuite(){
+		alert ("You have selected Premium Suite ");	
+		sessionStorage.setItem("suite", "You have selected Premium Suite ");
+		document.getElementById("result").innerHTML = sessionStorage.getItem("suite");
+		
+		sessionStorage.setItem("cost", 50+ " euro");
+		document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+		discount =30;			
+	}
+
+	function Dsuite(){
+		alert ("You have selected Deluxe Suite ");
+		sessionStorage.setItem("suite", "You have selected Deluxe Suite ");
+		document.getElementById("result").innerHTML = sessionStorage.getItem("suite");
+		
+		sessionStorage.setItem("cost", 70+ " euro");
+		document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+		discount =50;		
+	}
+
+	function Lsuite(){
+		alert ("You have selected Luxury Suite ");
+		sessionStorage.setItem("suite", "You have selected Luxury Suite ");
+		document.getElementById("result").innerHTML = sessionStorage.getItem("suite");
+		
+		sessionStorage.setItem("cost", 100 + " euro");
+		document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+		discount =80;		
+	}	
+
+	
+	function myCoupon()
+		{
+		var c=document.getElementById("coupon").value;
+
+		if (c=="discount")
+		  {
+			if(suite = "You have selected Luxury Suite ")
+			{
+
+				document.getElementById("answer").innerText="Successfully redeemed";
+				sessionStorage.setItem("cost", discount + " euro");
+				document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+			}
+			else if(suite = "You have selected Deluxe Suite ")
+			{
+				document.getElementById("answer").innerText="Successfully redeemed";
+				sessionStorage.setItem("cost",discount + " euro");
+				document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+			}	
+			else if(suite = "You have selected Premium Suite ")
+			{
+				document.getElementById("answer").innerText="Successfully redeemed";
+				sessionStorage.setItem("cost", discount + " euro");
+				document.getElementById("results").innerHTML = sessionStorage.getItem("cost");	
+			}				
+			else if (suite = "You have selected Formal Suite ")
+			{
+				document.getElementById("answer").innerText="Successfully redeemed";
+				sessionStorage.setItem("cost", discount + " euro");
+				document.getElementById("results").innerHTML = sessionStorage.getItem("cost");		
+			}
+
+				
+		  }
+		else
+		  {
+		document.getElementById("answer").innerHTML="Invalid voucher";
+		  }
+		}
+
+		
+
+	</script>	
+
+</style>
+</html>		
+	

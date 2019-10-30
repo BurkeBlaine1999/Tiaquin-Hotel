@@ -1,0 +1,253 @@
+	#head1
+	{
+		  opacity: 0.5;
+		  background-color: white;
+		  margin-top: 0;
+		  padding: 3em 1em 2em 1em;
+		  text-align: center;
+	}
+	
+	h1 {
+	  color: purple;
+	  font: bold 1.5em Georgia, serif;
+	  text-shadow: .1em .1em .2em gray;
+	}
+	h2 {
+	  color: #cc6600;
+	  font-size: 1em;
+	  text-transform: uppercase;
+	  letter-spacing: .5em;
+	  text-align: center;
+	}	
+
+	
+	#head2
+	{
+		text-align:center;
+	}
+	body
+	{
+		background-color: Beige 
+		font-family: Georgia, serif;
+		font-size: 100%;
+		line-height: 175%;
+		margin: 0 15% 0;
+	}
+	#footer
+	{
+		position: fixed; 
+		width:100%; 
+		text-align: center;
+	}
+	
+	#hometext
+	{
+		background-color: darkKhaki;
+		color: black;
+		 border-style: groove;
+		 border-color: orange;
+		 border-radius: 1px 15px 1px 1px;
+	}
+	
+	a {
+	color: purple;
+	}
+  
+	a:visited {color: #937393;}
+	a:hover {
+	background-color: white;
+	color: #c700f2;
+	}
+	a:active 
+	{ 
+		background-colour:Khaki;
+		color: # ff00ff;
+		text-decoration: underline;
+	}
+
+}
+#header {
+  opacity: 0.5;
+  background-color: white;
+  margin-top: 0;
+  padding: 3em 1em 2em 1em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+strong {
+  font-style: italic;
+}
+
+
+
+#info p {
+  font-style: italic;
+}
+
+
+
+h2 + p {
+  text-align: center;
+  font-style: italic;
+}
+
+#all
+{
+	text-align:left;
+{	
+
+
+}
+#header {
+  opacity: 0.5;
+  background-color: white;
+  margin-top: 0;
+  padding: 3em 1em 2em 1em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+dt {
+  font-weight: bold;
+}
+strong {
+  font-style: italic;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#info p {
+  font-style: italic;
+}
+
+
+
+h2 + p {
+  text-align: center;
+  font-style: italic;
+}
+
+		   
+		   	#head1
+	{
+		  opacity: 0.5;
+		  background-color: white;
+		  margin-top: 0;
+		  padding: 3em 1em 2em 1em;
+		  text-align: center;
+	}
+
+	}
+	#head2
+	{
+		text-align:center;
+	}
+	body
+	{
+		background-color: Khaki
+		font-family: Georgia, serif;
+		font-size: 100%;
+		line-height: 175%;
+		margin: 0 15% 0;
+	}
+	
+	#par69 
+	{
+		border:solid 1px;
+		border-color:black;
+		background-color:WhiteSmoke;
+		width:800px; height:150px;
+		
+		
+	}
+	
+	
+
+}
+#header {
+  opacity: 0.5;
+  background-color: white;
+  margin-top: 0;
+  padding: 3em 1em 2em 1em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+}
+dt {
+  font-weight: bold;
+}
+strong {
+  font-style: italic;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#info p {
+  font-style: italic;
+}
+.price {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+p.warning, sup {
+  font-size: small;
+}
+.label {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-style: normal;
+}
+
+h2 + p {
+  text-align: center;
+  font-style: italic;
+}
+
+  
+
+  
+body{
+	background-color: Beige 
+	font-family: Georgia, serif;
+	font-size: 100%;
+	line-height: 175%;
+	margin: 0 15% 0;	
+	}
+
+#table1
+{
+	background-color:WhiteSmoke ;
+}
+
+#head1
+{
+	  opacity: 0.5;
+	  background-color: white;
+	  margin-top: 0;
+	  padding: 3em 1em 2em 1em;
+	  text-align: center;
+}
+	
+
+
+  
+
+	
